@@ -53,7 +53,7 @@ public:
         return node != nullptr && node->is_end_of_word;
     }
 
-    bool starts_with(string prefix) {
+    bool prefijo(string prefix) {
         TrieNode* node = root;
         for (char c : prefix) {
             if (node->children.find(c) == node->children.end()) {
@@ -110,15 +110,14 @@ int main() {
     trie.insert("app");
     trie.insert("orangeade");
 
-    cout << std::boolalpha;
-    cout << trie.search("apple") << endl;   // Output: true
-    cout << trie.search("app") << endl;     // Output: true
-    cout << trie.search("or") << endl;      // Output: false
-    cout << trie.starts_with("or") << endl; // Output: true
+    cout << boolalpha;
+    cout << trie.search("apple") << endl;   
+    cout << trie.search("app") << endl;     
+    cout << trie.search("or") << endl;     
+    cout << trie.prefijo("or") << endl; 
 
     trie.deleteWord("apple");
-    cout << trie.search("apple") << endl;   // Output: false
+    cout << trie.search("apple") << endl;   
 
     return 0;
 }
-
