@@ -103,12 +103,12 @@ public:
     }
 };
 
-class BTree {
+class BTreeplus {
 public:
     Node* root;
     int t; // orden
 
-    BTree(int _t) {
+    BTreeplus(int _t) {
         root = new Node(_t);
         root->leaf = true;
     }
@@ -135,13 +135,13 @@ public:
     }
 };
 
-void printTree(BTree* tree) {
+void printTree(BTreeplus* tree) {
     tree->print();
 }
 
 int main() {
     int len = 3;
-    BTree* bplustree = new BTree(len);
+    BTreeplus* bplustree = new BTreeplus(len);
     bplustree->insert("5", 33);
     bplustree->insert("15", 21);
     bplustree->insert("25", 31);
@@ -153,7 +153,7 @@ int main() {
     if (bplustree->search("5", 34) != NULL) {
         cout << "Se encontro" << endl;
     } else {
-        cout << "No se encontró" << endl;
+        cout << "No se encontro" << endl;
     }
 
     return 0;
