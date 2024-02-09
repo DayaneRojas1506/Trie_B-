@@ -1,4 +1,4 @@
 # Trie_B+
 ------
-->Brigitte Dayane Rojas Leon
--> 
+->Brigitte Dayane Rojas Leon//
+-> Jose Barrenechea
